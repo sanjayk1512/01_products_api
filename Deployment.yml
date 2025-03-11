@@ -16,7 +16,7 @@ spec:
   spec:
     containers:
     - name: productscontainer
-      image: vinodses/products
+      image: sanjayk062/products
       ports:
       - containerPort: 8080
 ---
