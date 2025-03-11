@@ -2,13 +2,13 @@ pipeline {
     agent any
     
     tools{
-        maven "Maven-3.9.9"
+        maven "maven"
     }    
 
     stages {
         stage('Git Clone') {
             steps {
-               git branch: 'main', url: 'https://github.com/suffixscope/01_products_api.git'
+               git branch: 'main', url: 'https://github.com/sanjayk1512/01_products_api.git'
             }
         }
         stage('Maven Build'){
@@ -18,14 +18,14 @@ pipeline {
         }
         stage('Docker Image'){
             steps{
-             sh 'docker build -t suffixscope/products_api .'
+             sh 'docker build -t sanjayk062/products_api .'
             }
         }
         stage('Docker Image push'){
             steps
             withCredentials([string(credentialsId: 'docker_pwd', variable: 'docker_pwd')]) {
-                   sh 'docker login -u suffixscope -p ${docker_pwd}'
-                   sh 'docker push suffixscope/products_api'
+                   sh 'docker login -u sanjayk062 -p ${docker_pwd}'
+                   sh 'docker push sanjayk062/products_api'
             }
             }
         }
