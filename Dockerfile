@@ -1,8 +1,8 @@
 FROM openjdk:17
 
-COPY target/products_api.jar  /usr/app/
+COPY target/products_api.jar  /sanjayk062/products_api/
 
-WORKDIR /usr/app/
+WORKDIR /sanjayk062/products_api/
 
 ENTRYPOINT ["java", "-jar", "products_api.jar"]
 
