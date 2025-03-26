@@ -58,7 +58,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>products_api</finalName>
+		<finalName>product2_api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
