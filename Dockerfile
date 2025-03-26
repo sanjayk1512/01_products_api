@@ -1,9 +1,9 @@
 FROM openjdk:17
 
-COPY target/products_api.jar  /sanjayk062/products_api/
+COPY target/product2_api.jar  /sanjayk062/product2_api/
 
-WORKDIR /sanjayk062/products_api/
+WORKDIR /sanjayk062/product2_api/
 
-ENTRYPOINT ["java", "-jar", "products_api.jar"]
+ENTRYPOINT ["java", "-jar", "product2_api.jar"]
 
 EXPOSE 8080
